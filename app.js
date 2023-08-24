@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const middleware = require('./middlewares/middleware');
 // eslint-disable-next-line import/no-unresolved, import/extensions
-const limiter = require('./middlewares/rateLimiter');
+const limiter = require('./middlewares/rateLimit');
 const allRoutes = require('./routes');
 const cors = require('./middlewares/cors');
 
