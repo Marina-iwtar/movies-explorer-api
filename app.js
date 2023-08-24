@@ -8,12 +8,14 @@ const middleware = require('./middlewares/middleware');
 // eslint-disable-next-line import/no-unresolved, import/extensions
 const limiter = require('./middlewares/rateLimiter');
 const allRoutes = require('./routes');
+const cors = require('./middlewares/cors');
 
 const { PORT } = process.env;
 const { BD_BITFILMS } = process.env;
 
 const app = express();
 app.use(limiter);
+app.use(cors);
 app.use(requestLogger);
 app.use(express.json());
 mongoose.connect(BD_BITFILMS);
