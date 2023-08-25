@@ -33,7 +33,7 @@ const validateCreateCardMovie = celebrate({
 });
 const validatorRemoveMovie = celebrate({
   params: Joi.object().keys({
-    movieId: Joi.string().hex().length(10).required(),
+    movieId: Joi.string().hex().length(24).required(),
   }),
 });
 const validatorUpdatesUser = celebrate({

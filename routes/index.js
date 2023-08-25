@@ -8,9 +8,9 @@ const { validateUpdatesUser, validateLogin } = require('../validate/validate');
 
 router.post('/signin', validateLogin, login);
 router.post('/signup', validateUpdatesUser, createUsers);
-router.use('/users', auth, usersRouter);
-router.use('/movies', auth, moviesRouter);
-
+router.use(auth);
+router.use('/users', usersRouter);
+router.use('/movies', moviesRouter);
 router.use('*', (req, res, next) => {
   next(new ErrorNotFound('Страница не найдена'));
 });
