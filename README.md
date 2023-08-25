@@ -6,6 +6,6 @@
 
 IP 84.252.136.5
 
-Frontend https://iwtarDiplom.nomoredomainsicu.ru
+Frontend https://iwtarmovies.nomoredomainsicu.ru
 
-Backend https://api.iwtarDiplom.nomoredomainsicu.ru
+Backend https://api.iwtarmovies.nomoredomainsicu.ru
