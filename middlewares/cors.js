@@ -1,6 +1,6 @@
 const allowedCors = [
-  'https://iwtarDiplom.nomoredomainsicu.ru',
-  'http://iwtarDiplom.nomoredomainsicu.ru',
+  'https://iwtarmovies.nomoredomainsicu.ru',
+  'http://iwtarmovies.nomoredomainsicu.ru',
   'https://localhost:4000',
   'http://localhost:4000',
 ];
