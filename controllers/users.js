@@ -41,8 +41,8 @@ module.exports.updatesUser = (req, res, next) => {
             'Переданы некорректные данные при обновлении пользователя.',
           ),
         );
-      } else if (err.name === 'DocumentNotFoundError') {
-        next(new ErrorNotFound('Пользователь с указанным _id не найден.'));
+      } else if (err.code === 11000) {
+        next(new ErrrorConflict(`Пользователь с таким ${email} уже зарегистирован`));
       } else {
         next(err);
       }

@@ -11,6 +11,7 @@ router.post('/signup', validateUpdatesUser, createUsers);
 router.use(auth);
 router.use('/users', usersRouter);
 router.use('/movies', moviesRouter);
+
 router.use('*', (req, res, next) => {
   next(new ErrorNotFound('Страница не найдена'));
 });
