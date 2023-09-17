@@ -3,18 +3,20 @@ const express = require('express');
 const helmet = require('helmet');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
+// eslint-disable-next-line import/no-unresolved
+const cors = require('cors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const middleware = require('./middlewares/middleware');
 // eslint-disable-next-line import/no-unresolved, import/extensions
 const limiter = require('./middlewares/rateLimit');
 const allRoutes = require('./routes/index');
-const cors = require('./middlewares/cors');
+// const cors = require('./middlewares/cors');
 const { BD_BITFILMS, PORT } = require('./utils/config');
 
 const app = express();
 mongoose.connect(BD_BITFILMS);
 app.use(limiter);
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(requestLogger);
 app.use(express.json());
 app.use(helmet());
