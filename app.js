@@ -14,7 +14,7 @@ const { BD_BITFILMS, PORT } = require('./utils/config');
 const app = express();
 mongoose.connect(BD_BITFILMS);
 app.use(limiter);
-app.use(cors);
+app.use(cors());
 app.use(requestLogger);
 app.use(express.json());
 app.use(helmet());
