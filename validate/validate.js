@@ -4,14 +4,14 @@ const { regexLink } = require('../utils/constants');
 const validateUpdatesUser = celebrate({
   body: Joi.object().keys({
     name: Joi.string().required().min(2).max(30),
-    email: Joi.string().required().email(),
+    email: Joi.string().required().pattern(),
     password: Joi.string().required().min(8),
   }),
 });
 
 const validateLogin = celebrate({
   body: Joi.object().keys({
-    email: Joi.string().required().email(),
+    email: Joi.string().required().pattern(),
     password: Joi.string().required().min(8),
   }),
 });
@@ -39,7 +39,7 @@ const validatorRemoveMovie = celebrate({
 const validatorUpdatesUser = celebrate({
   body: Joi.object().keys({
     name: Joi.string().required().min(2).max(30),
-    email: Joi.string().required().email(),
+    email: Joi.string().required().pattern(),
   }),
 });
 
