@@ -1,8 +1,8 @@
 const allowedCors = [
   'https://iwtarmovies.nomoredomainsicu.ru',
   'http://iwtarmovies.nomoredomainsicu.ru',
-  'https://localhost:4000',
-  'http://localhost:4000',
+  // 'https://localhost:4000',
+  // 'http://localhost:4000',
   'http://localhost:3000',
   'https://localhost:3000',
 ];

@@ -17,7 +17,7 @@ const app = express();
 mongoose.connect(BD_BITFILMS);
 app.use(limiter);
 // app.use(cors({ origin: ['http://localhost:3000', 'https://iwtarmovies.nomoredomainsicu.ru', 'http://iwtarmovies.nomoredomainsicu.ru'], credentials: true }));
-app.use(cors);
+app.use(cors());
 app.use(requestLogger);
 app.use(express.json());
 app.use(helmet());
