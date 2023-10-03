@@ -16,7 +16,7 @@ const { BD_BITFILMS, PORT } = require('./utils/config');
 const app = express();
 mongoose.connect(BD_BITFILMS);
 app.use(limiter);
-app.use(cors({ origin: ['https://iwtarmovies.nomoredomainsicu.ru'], credentials: true }));
+app.use(cors({ origin: 'https://iwtarmovies.nomoredomainsicu.ru' }));
 // app.use(cors());
 app.use(requestLogger);
 app.use(express.json());
