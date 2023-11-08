@@ -1,11 +1,18 @@
 # movies-explorer-api
+Backend  приложения для поиска фильмов.
+
+## Функциональность:
+* Валидация входящих данных
+* Получение и обработка с frontend
+* Логирование запросов и ошибок
+* Проверка авторизации пользователя
   
-Адрес репозитория: https://github.com/Marina-iwtar/movies-explorer-api/pulls
+## Стэк технологий:
+* Express.js
+* Node.js
+* JavaScript
+* MongoDB
+* Postman
 
-## Ссылки на проект
 
-IP 84.252.136.5
 
-Frontend https://iwtarmovies.nomoredomainsicu.ru
-
-Backend https://api.iwtarmovies.nomoredomainsicu.ru
